@@ -1,0 +1,15 @@
+{
+  "name": "cordova-custom-notify",
+  "version": "1.0.0",
+  "description": "Custom Cordova plugin for 5 sec vibration and sound notification",
+  "cordova": {
+    "id": "custom.notify.plugin",
+    "platforms": ["android"]
+  },
+  "main": "plugin.xml",
+  "keywords": [
+    "cordova", "plugin", "vibration", "notification", "android"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
