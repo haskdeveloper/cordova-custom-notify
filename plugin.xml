@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="custom.notify.plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="custom.notify.plugin"
+        version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
     <name>NotifyPlugin</name>
 
+    <!-- JS interface -->
     <js-module src="www/notify.js" name="NotifyPlugin">
         <clobbers target="NotifyPlugin" />
     </js-module>
 
     <platform name="android">
+
+        <!-- Java class -->
         <source-file src="src/android/NotifyPlugin.java" target-dir="src/com/example/notifyplugin" />
 
-        <config-file target="AndroidManifest.xml" parent="application">
+        <!-- Permissions -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <uses-permission android:name="android.permission.VIBRATE" />
         </config-file>
     </platform>
